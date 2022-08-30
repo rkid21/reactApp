@@ -35,7 +35,10 @@ useEffect(() => {
           <input
             placeholder="Search"
             value={searchTerm}
-            onChange={(e) => searchMovies(e.target.value) }
+            onChange={(e) => {
+                searchMovies(searchTerm);
+                setSearchTerm(e.target.value)
+            } }
             />
             <img 
             src={SearchIcon}
